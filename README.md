@@ -7,7 +7,7 @@ https://en.wikipedia.org/wiki/Random_dungeon#:~:text=A%20random%20dungeon%20is%2
 
 The dungeon can be 2D or 3D. At the very least, it should have rooms and hallways.
 ```
-The solution is for a 2D dungeon generated in a square grid.
+The solution is for a 2D dungeon generated in a square grid implemented in a Visual Studio Console application.
 
 ## How it works
 On a square grid, a start tile `S` is placed at random. From there, any adjacent tile can become a hallway `H` or a room `R`. When a hallway is placed, any adjacent tile that is empty `*` can again become a hallway or a room. When a room is placed, it will lead nowhere, so its adjacent spawning tile becomes the spawning tile again. The ending tile `E` becomes a potential tile to be placed once an amount of hallways equaling half the length of the grid have been placed. Once the ending tile has been placed generation is complete.
